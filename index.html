@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba JavaScript</title>
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap 4.5.2 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Own css -->
+    <link rel="stylesheet" href="/javaScript/css/style.css">
+
+</head>
+
+<body>
+    <a href="#top" id="goTop">Ir arriba</a>
+    <h1 id="top">Javascript</h2>
+
+        <div class="divCentrado">
+            <a class="btn btn-dark" data-toggle="collapse" href="#claseUno" role="button" aria-expanded="false"
+                aria-controls="claseUno">
+                Ejercicios 23/09/2020
+            </a>
+            <a class="btn btn-dark" data-toggle="collapse" href="#claseDos" role="button" aria-expanded="false"
+                aria-controls="claseDos">
+                Ejercicios 25/09/2020
+            </a>
+            <a class="btn btn-dark" data-toggle="collapse" href="#claseTres" role="button" aria-expanded="false"
+                aria-controls="claseTres">
+                Ejercicios 25/09/2020
+            </a>
+            <a class="btn btn-dark" data-toggle="collapse" href="#claseCuatro" role="button" aria-expanded="false"
+                aria-controls="claseCuatro">
+                Ejercicios 2/10/2020
+            </a>
+            <a class="btn btn-dark" data-toggle="collapse" href="#claseCinco" role="button" aria-expanded="false"
+                aria-controls="claseCinco">
+                Ejercicios 7/10/2020
+            </a>
+        </div>
+
+
+        <!-- CLASE 1 -->
+        <div class="collapse" id="claseUno">
+
+            <!-- Ejercicio 1 -->
+            <div>
+                <p><b>Ejercicio 1:</b> <br>
+                    Solicitar nombre al usuario mediante un prompt, mostrar su nombre y apellido concatenado usando un
+                    id en HTML y
+                    un (document.getElementById("id").innerHTML = var). en JS para manipular el DOM.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="concatenarNombre()">¿Cual es mi nombre?</button>
+                <button class="cleanButton" onclick="borrar('miNombre')">Borrar</button>
+            </div>
+            <p id="miNombre" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 2 -->
+            <div>
+                <p><b>Ejercicio 2:</b> <br>
+                    Crear una función para detectar la eleccion del usuario aplicando confirm y el ciclo de control if.
+                    Mostrar su salida através del mismo HTML.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="confirmacion('Elija una opcion')">¿Cual fue la opcion del usuario?</button>
+                <button class="cleanButton" onclick="borrar('respuestaConfirmar')">Borrar</button>
+            </div>
+            <p id="respuestaConfirmar" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+        </div>
+
+        <!-- CLASE 2 -->
+        <div class="collapse" id="claseDos">
+            <!-- Ejercicio 3 -->
+            <div>
+                <p><b>Ejercicio 3:</b> <br>
+                    Crear una función para solicitar al usuario ingresar su sueldo y el bono extra mediante un prompt.
+                    Mostrar la suma dentro del mismo HTML.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="sumaSueldo()">Calcular sueldo</button>
+                <button class="cleanButton" onclick="borrar('respuestaSueldo')">Borrar</button>
+            </div>
+            <p id="respuestaSueldo" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 4 -->
+            <div>
+                <p><b>Ejercicio 4:</b> <br>
+                    Crear una función que solicite al usuario que ingrese su edad, si es mayor de 18 años informar que
+                    puede acceder sino, informar que no tiene permiso.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="controlEdad()">¿Puedo ingresar?</button>
+            </div>
+            <p id="respuestaEdad" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 5 -->
+            <div>
+                <p><b>Ejercicio 5:</b> <br>
+                    Desarrollar una funcion que solicite al usuario el ingreso de su sueldo, si es mayor a 200 informar,
+                    si gana entre 150 y 200 informar, sino decirle que pida aumento.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="controlSalario()">Informar salario</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 6 -->
+            <div>
+                <p><b>Ejercicio 6:</b> <br>
+                    Solicitar el ingreso de antiguedad laboral y nombre del usuario <br>
+                    Más de 30 años final del if mostrar nombre y jubilado <br>
+                    Entre 10 a 29 pedir salario luego mostrar nombre y salario <br>
+                    SINO mostrar edad y antiguedad <br>
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="antiguedadLaboral()">Control antiguedad</button>
+            </div>
+            <p id="respuestaAntiguedad" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 7 -->
+            <div>
+                <p><b>Ejercicio 7:</b> <br>
+                    Armar un ciclo while que se ejecute N veces que ingrese el usuario.
+                    Mostrar el resultado con un document.write()
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="contadorWhile()">Empezar ciclo</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  8 -->
+            <div>
+                <p><b>Ejercicio 8:</b> <br>
+                    Crear una funcion que solicite el ingreso de un numero hasta que coincida con un numero predefinido.
+                    Mostrar su salida dentro del mismo HTML.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="adivinarNumeroDo()">Intentar adivinar</button>
+            </div>
+            <p id="adivinarNumero" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  9 -->
+            <div>
+                <p><b>Ejercicio 9:</b> <br>
+                    Repetir el codigo anterior utilizando el ciclo WHILE
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="adivinarNumeroWhile()">Intentar adivinar</button>
+            </div>
+            <p id="adivinarNumeroWhile" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+        </div>
+
+        <!-- CLASE 3 -->
+        <div class="collapse" id="claseTres">
+            <!-- Ejercicio  10 -->
+            <div>
+                <p><b>Ejercicio 10:</b> <br>
+                    Desarrollar un programa que lea con getDay el dia e informar que dia es y cuanto falta para el
+                    findesemana
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="diaSemana()">¿Cuánto falta para el sábado?</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  11 -->
+            <div>
+                <p><b>Ejercicio 11:</b> <br>
+                    Crear un programa utilizando FOR para recorrer el siguiente arreglo:<br>
+                    ['Federico', 'Sebastian', 'Lucas', 'Denis'],
+                    mostrar los elementos con su indice y cantidad de elementos del arreglo.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="recorriendoFor()">Recorrer array</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  12 -->
+            <div>
+                <p><b>Ejercicio 12:</b> <br>
+                    Con el siguiente arreglo de objetos "empleados": <br>
+                    [{ nombre: "Federico", apellido: "Cáceres", dni: 39076824 }, { nombre: "Luciano", apellido:
+                    "Cardona", dni: 32376824 }].<br>
+                    Crear una función para leer y mostrar el dni del ultimo empleado usando FOR.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="dniUltimoEmpleado()">Dni último empleado</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  13 -->
+            <div>
+                <p><b>Ejercicio 13:</b> <br>
+                    Con el mismo arreglo de objetos "empleados":<br>
+                    Crear una función para leer y mostrar nombre y apellido del último empleado.
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="nombreApellidoUltimoEmpleado()">Mostrar nombre y apellido del ultimo empleado</button>
+                <button class="cleanButton" onclick="borrar('nombreApellidoUltimoEmpleado')">Borrar</button>
+            </div>
+            <p id="nombreApellidoUltimoEmpleado" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  14 -->
+            <div>
+                <p><b>Ejercicio 14:</b> <br>
+                    Utilizar SPLICE para modificar un array
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="spliceArray()">Modificar array con splice</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  15 -->
+            <div>
+                <p><b>Ejercicio 15:</b> <br>
+                    Armar dos array de la clase felino y reptiles y unir sus elementos usando CONCAT
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="arrayEspecies()">Concaternar Especies</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  16 -->
+            <div>
+                <p><b>Ejercicio 16:</b> <br>
+                    Usar el metodo slice dentro de un array
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="sliceArray()">Probar Slice</button>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio  17 -->
+            <div>
+                <p><b>Ejercicio 17:</b> <br>
+                    Recorrer con un for un arreglo bidimensional y mostrar todos sus elementos
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="forMatrices()">Mostrar elementos de la matriz</button>
+                <p id="mostrarMatriz" style="font-weight:bold;"></p>
+            </div>
+            <div class="separador"></div>
+        </div>
+
+        <!-- CLASE 4 -->
+        <div class="collapse" id="claseCuatro">
+            <!-- Ejercicio 18 -->
+            <div>
+                <p><b>Ejercicio 18:</b> <br>
+                    Definir una funcion que solicite dos numeros y que devuelva su multiplicacion
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="multiplicar()">Funcion multiplicar</button>
+                <button class="cleanButton" onclick="borrar('respuestaMultiplicar')">Borrar</button>
+            </div>
+            <p id="respuestaMultiplicar" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 19 -->
+            <div>
+                <p><b>Ejercicio 19:</b> <br>
+                    Hacer una funcion que reciba el color como parametro y al hacer click en un boton con el nombre AZUL
+                    que muestre en el index.html
+                    el mensaje "el color es: blue" (usar el div)
+                    HACER 4 botones con los colores azul (blue), rojo(red), verde(green), Rosa (pink)
+                </p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="colorsButtons('BLUE')">AZUL</button>
+                <button onclick="colorsButtons('RED')">ROJO</button>
+                <button onclick="colorsButtons('GREEN')">VERDE</button>
+                <button onclick="colorsButtons('PINK')">ROSA</button>
+                <button class="cleanButton" onclick="borrar('respuestaColorsButton')">Borrar</button>
+            </div>
+            <p id="respuestaColorsButton" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+        </div>
+
+        <!-- CLASE 5 -->
+        <div class="collapse" id="claseCinco">
+            <!-- Ejercicio 20 -->
+            <div>
+                <p><b>Ejercicio 20:</b> <br>
+                    En un documento HTML don dos etiquetas P modificar con jquery el segundo elemento P con el método
+                    .html
+                </p>
+                <p id="primerParrafoId">Primer párrafo con id</p>
+                <p class="segundoParrafoClase">Segundo párrafo con clase</p>
+            </div>
+            <div class="divCentrado">
+                <button onclick="jqueryModificarP()">Modificar párrafo</button>
+            </div>
+            <p id="RespuestajqueryModificarP" style="font-weight:bold;"></p>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 21 -->
+            <div>
+                <p><b>Ejercicio 21:</b> <br>
+                    Utilizar una funcion principal "inicializar" que capture eventos dentro del html con js y jquery
+                </p>
+                <p id="parrafoLorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, fugiat
+                    voluptates? Similique
+                    eligendi voluptas sed sit nobis distinctio eius eum eveniet corrupti, ipsum, facere, cumque impedit
+                    veniam ut voluptates at.</p>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 22 -->
+            <div>
+                <p><b>Ejercicio 22:</b> <br>
+                    Utilizar el método .val para capturar los valores de un option SI y NO en una etiqueta select
+                </p>
+                <div class="divCentrado">
+                    <select>
+                        <option value=""></option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="separador"></div>
+
+            <!-- Ejercicio 23 -->
+            <div>
+                <p><b>Ejercicio 23:</b> <br>
+                    Crear dos botones que aparezca el texto y otro para hacer desaparecer el texto aplicando jquery
+                </p>
+                <div class="divCentrado">
+                    <button id="buttonShow">Mostrar texto</button>
+                    <button id="buttonHide">Esconder texto</button>
+                </div>
+                <div id="divHideShow">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, eaque id. Et accusantium
+                        blanditiis
+                        nemo, obcaecati rerum nostrum qui velit repellat sed harum minima architecto reprehenderit nam
+                        nobis, itaque facilis!</p>
+                </div>
+            </div>
+            <div class="separador"></div>
+        </div>
+
+        <!-- Own JS -->
+        <script src="/javaScript/js/main.js"></script>
+        <!-- lightbox -->
+        <!-- <script src="/javaScript/js/lightbox.js"></script> -->
+        <!-- Bootstrap 4.5.2 JS, Jquery Popper -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
